@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavComponent } from './component/nav/nav.component';
-import { HomeComponent } from './component/home/home.component';
-import { FamilyTreeComponent } from './component/family-tree/family-tree.component';
-import { PhotoLibraryComponent } from './component/photo-library/photo-library.component';
+import { NavComponent } from './modules/nav/nav.component';
+import { HomeComponent } from './modules/home/home.component';
+import { FamilyTreeComponent } from './modules/family-tree/family-tree.component';
+import { PhotoLibraryComponent } from './modules/photo-library/photo-library.component';
 
 @NgModule({
   declarations: [

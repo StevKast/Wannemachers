@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FamilyTreeComponent } from './component/family-tree/family-tree.component';
-import { HomeComponent } from "./component/home/home.component";
-import { PhotoLibraryComponent } from './component/photo-library/photo-library.component';
+import { FamilyTreeComponent } from './modules/family-tree/family-tree.component';
+import { HomeComponent } from "./modules/home/home.component";
+import { PhotoLibraryComponent } from './modules/photo-library/photo-library.component';
 
 const routes: Routes = [
   {
