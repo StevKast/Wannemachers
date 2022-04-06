@@ -19,25 +19,25 @@ export class FamilyTreeComponent implements OnInit {
       {
         name: 'steven',
         parents: ['kevin', 'kathy'],
-        id: 1,
+        id: 3,
         generation: 2
       },
       {
         name: 'courtney',
         parents: ['kevin', 'kathy'],
-        id: 2,
+        id: 4,
         generation: 2
       },
       {
         name: 'kevin',
         spouse: 'kathy',
-        id: 3,
+        id: 1,
         generation: 1
       },
       {
         name: 'kathy',
         spouse: 'kevin',
-        id: 4,
+        id: 2,
         generation: 1
       },
     ]
@@ -69,7 +69,7 @@ export class FamilyTreeComponent implements OnInit {
     const nodes = this.two.makeGroup([]);
 
     this.familyTest.familyMembers.forEach(element => {
-      nodes.add(this.createMemberNode(element.name, element.generation));
+      nodes.add(this.createMemberNode(element));
     });
 
     this.familyTest.familyMembers.forEach(element => {
@@ -77,16 +77,18 @@ export class FamilyTreeComponent implements OnInit {
     });
   }
 
-  createMemberNode(name: string, generation: number) {
-    const x = this.two.width * 0.5 * Math.random();
-    const y = this.two.height * 0.25 * generation;
-    const width = name.length * 10;
+  createMemberNode(familyMember: FamilyMember) {
+    // const x = this.two.width * 0.5 * Math.random();
+    // const y = this.two.height * 0.25 * generation;
+    const x = this.two.width * 0.25 * (familyMember.id / familyMember.generation);
+    const y = this.two.height * 0.25 * familyMember.generation;
+    const width = familyMember.name.length * 10;
     const height = 50;
     const rect = this.two.makeRectangle(0, 0, width, height);
-    const text = this.two.makeText(name, 0, 0);
+    const text = this.two.makeText(familyMember.name, 0, 0);
     const familyMemberNode = this.two.makeGroup([]);
     familyMemberNode.add(rect, text);
-    familyMemberNode.id = name;
+    familyMemberNode.id = familyMember.name;
     familyMemberNode.position = new Vector(x, y);
     return familyMemberNode;
   }
