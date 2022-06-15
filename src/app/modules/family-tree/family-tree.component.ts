@@ -20,25 +20,43 @@ export class FamilyTreeComponent implements OnInit {
         name: 'steven',
         parents: ['kevin', 'kathy'],
         id: 3,
-        generation: 2
+        generation: 3
       },
       {
         name: 'courtney',
         parents: ['kevin', 'kathy'],
         id: 4,
-        generation: 2
+        generation: 3
       },
       {
         name: 'kevin',
         spouse: 'kathy',
+        parents: ['ray', 'rose'],
         id: 1,
-        generation: 1
+        generation: 2
       },
       {
         name: 'kathy',
         spouse: 'kevin',
         id: 2,
+        generation: 2
+      },
+      {
+        name: 'ray',
+        spouse: 'rose',
+        id: 5,
         generation: 1
+      },
+      {
+        name: 'rose',
+        spouse: 'ray',
+        id: 6,
+        generation: 1
+      },
+      {
+        name: 'hannah',
+        id: 7,
+        generation: 3
       },
     ]
   };
@@ -72,9 +90,12 @@ export class FamilyTreeComponent implements OnInit {
       nodes.add(this.createMemberNode(element));
     });
 
+    this.arrangeTree();
+
     this.familyTest.familyMembers.forEach(element => {
       this.drawRelationships(element);
     });
+
   }
 
   createMemberNode(familyMember: FamilyMember) {
@@ -126,5 +147,43 @@ export class FamilyTreeComponent implements OnInit {
 
       this.two.makeLine(cx, cy, px, py);
     }
+  }
+
+  arrangeTree() {
+    let xPos = 200;
+    let yPos = 100;
+
+    const xCount = 4;
+
+    let row = 0;
+
+    this.familyTest.familyMembers.forEach((element, index) => {
+
+      if (index % xCount === 0) {
+        row++;
+      }
+
+      let x = (xPos * (index % xCount)) + 100;
+      let y = (yPos * row) + 100;
+
+
+      this.two.scene.getById(element.name).position = new Vector(x, y);
+      console.log(index + ' ' + element.name + ' ' + x + ' ' + y);
+    });
+
+    this.familyTest.familyMembers.filter(fam => fam.generation === 1);
+
+    this.moveNode('steven', 0, 33);
+
+    // this.two.scene.getById('hannah').position = new Vector(50, 100);
+    // this.two.scene.getById('steven').position = new Vector(100, 100);
+    // this.two.scene.getById('courtney').position = new Vector(150, 100);
+  }
+
+  moveNode(nodeId: string, x?: number, y?: number) {
+    console.log(x + ' ' + y);
+    const currentPos = this.two.scene.getById(nodeId).position;
+    this.two.scene.getById(nodeId).position = new Vector(currentPos.x + x, currentPos.y + y);
+    console.log();
   }
 }
