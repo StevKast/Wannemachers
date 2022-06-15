@@ -1,0 +1,27 @@
+<mat-toolbar class="">
+    <div class="w-full relative flex justify-between ">
+        <a class="inline-block mr-4 py-2" routerLink="/home">
+            The Wannemacher Family
+        </a>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </div>
+
+    <mat-menu #menu="matMenu" yPosition="below" xPosition="before">
+        <button mat-menu-item class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Home icon" routerLink="/home">
+            <mat-icon>home</mat-icon>
+            Home
+        </button>
+        <button mat-menu-item class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Photo library icon"
+            routerLink="/photos">
+            <mat-icon>photo_library</mat-icon>
+            Photos
+        </button>
+        <button mat-menu-item class="px-3 py-2 menu-item" aria-hidden="false" aria-label="Family Tree icon"
+            routerLink="/tree">
+            <mat-icon>park</mat-icon>
+            Family Tree
+        </button>
+    </mat-menu>
+</mat-toolbar>

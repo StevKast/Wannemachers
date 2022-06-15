@@ -12,4 +12,9 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showMenu = false;
+  toggleNavbar() {
+    this.showMenu = !this.showMenu;
+  }
+
 }

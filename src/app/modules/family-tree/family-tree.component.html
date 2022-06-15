@@ -1,6 +1,230 @@
-<p>family-tree works!</p>
+<div class="mx-auto px-4">
+    <h1 class="text-center pt-5">Wannemacher Family Tree</h1>
 
 
-<div #treeDiv>
-    <p>Tree: </p>
+    <!-- <app-person *ngFor="let person of familyTest.familyMembers" [name]="person.name" [birthDate]="person.birthDate">
+        </app-person> -->
+
+    <!-- Reference: https://tailwindcomponents.com/component/tailwindcss-flow-chart -->
+    <div class="items-center justify-center flex bg-gradient-to-t from-red-700/10">
+        <div class="p-4 overflow-auto">
+            <div class="flex flex-row justify-center items-center space-x-2">
+                <app-person name="Herman Wannemacher" birthDate="July 28 1998">
+                </app-person>
+                <app-person name="Hellen Wannemacher" birthDate="July 28 1998">
+                </app-person>
+            </div>
+            <ul class="flex flex-row mt-10 justify-center relative">
+                <div class="-mt-10 border-l-2 absolute h-10 border-gray-400"></div>
+                <li class="relative p-6">
+                    <div class="border-t-2 absolute h-8 border-gray-400 top-0" style="left: 50%; right: 0px;">
+                    </div>
+                    <div class="relative flex justify-center">
+                        <div class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0"></div>
+                        <div class="">
+                            <div class="flex flex-col justify-center items-center">
+                                <app-person name="Steven Kast 1" birthDate="July 28 1998">
+                                </app-person>
+                            </div>
+                            <ul class="flex flex-row mt-10 justify-center">
+                                <div class="-mt-10 border-l-2 absolute h-10 border-gray-400"></div>
+                                <li class="relative p-6">
+                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                        style="left: 50%; right: 0px;"></div>
+                                    <div class="relative flex justify-center">
+                                        <div class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                        </div>
+                                        <div class="">
+                                            <div class="flex flex-col justify-center items-center">
+                                                <app-person name="Steven Kast 2" birthDate="July 28 1998">
+                                                </app-person>
+                                            </div>
+                                            <ul class="flex flex-row mt-10 justify-center">
+                                                <div class="-mt-10 border-l-2 absolute h-10 border-gray-400">
+                                                </div>
+                                                <li class="relative p-6">
+                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                        style="left: 50%; right: 0px;"></div>
+                                                    <div class="relative flex justify-center">
+                                                        <div
+                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="flex flex-col justify-center items-center">
+                                                                <app-person name="Steven Kast 3"
+                                                                    birthDate="July 28 1998">
+                                                                </app-person>
+                                                            </div>
+                                                            <ul class="flex flex-row mt-10 justify-center">
+                                                                <div
+                                                                    class="-mt-10 border-l-2 absolute h-10 border-gray-400">
+                                                                </div>
+                                                                <li class="relative p-6">
+                                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                                        style="left: 50%; right: 0px;">
+                                                                    </div>
+                                                                    <div class="relative flex justify-center">
+                                                                        <div
+                                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <div
+                                                                                class="flex flex-col justify-center items-center">
+                                                                                <app-person name="Steven Kast 4"
+                                                                                    birthDate="July 28 1998">
+                                                                                </app-person>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="relative p-6">
+                                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                                        style="left: 0px; right: 50%;">
+                                                                    </div>
+                                                                    <div class="relative flex justify-center">
+                                                                        <div
+                                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <div
+                                                                                class="flex flex-col justify-center items-center">
+                                                                                <app-person name="Steven Kast 5"
+                                                                                    birthDate="July 28 1998">
+                                                                                </app-person>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="relative p-6">
+                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                        style="left: 0px; right: 0px;"></div>
+                                                    <div class="relative flex justify-center">
+                                                        <div
+                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="flex flex-col justify-center items-center">
+                                                                <app-person name="Steven Kast 6"
+                                                                    birthDate="July 28 1998">
+                                                                </app-person>
+                                                            </div>
+                                                            <ul class="flex flex-row mt-10 justify-center">
+                                                                <div
+                                                                    class="-mt-10 border-l-2 absolute h-10 border-gray-400">
+                                                                </div>
+                                                                <li class="relative p-6">
+                                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                                        style="left: 50%; right: 50%;">
+                                                                    </div>
+                                                                    <div class="relative flex justify-center">
+                                                                        <div
+                                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                                        </div>
+                                                                        <div class="">
+                                                                            <div
+                                                                                class="flex flex-col justify-center items-center">
+                                                                                <app-person name="Steven Kast 7"
+                                                                                    birthDate="July 28 1998">
+                                                                                </app-person>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="relative p-6">
+                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                        style="left: 0px; right: 50%;"></div>
+                                                    <div class="relative flex justify-center">
+                                                        <div
+                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="flex flex-col justify-center items-center">
+                                                                <app-person name="Steven Kast 8"
+                                                                    birthDate="July 28 1998">
+                                                                </app-person>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="relative p-6">
+                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                        style="left: 0px; right: 50%;"></div>
+                                    <div class="relative flex justify-center">
+                                        <div class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                        </div>
+                                        <div class="">
+                                            <div class="flex flex-col justify-center items-center">
+                                                <app-person name="Steven Kast 9" birthDate="July 28 1998">
+                                                </app-person>
+                                            </div>
+                                            <ul class="flex flex-row mt-10 justify-center">
+                                                <div class="-mt-10 border-l-2 absolute h-10 border-gray-400">
+                                                </div>
+                                                <li class="relative p-6">
+                                                    <div class="border-t-2 absolute h-8 border-gray-400 top-0"
+                                                        style="left: 50%; right: 50%;"></div>
+                                                    <div class="relative flex justify-center">
+                                                        <div
+                                                            class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0">
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="flex flex-col justify-center items-center">
+                                                                <app-person name="Steven Kast 10"
+                                                                    birthDate="July 28 1998">
+                                                                </app-person>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative p-6">
+                    <div class="border-t-2 absolute h-8 border-gray-400 top-0" style="left: 0px; right: 0px;">
+                    </div>
+                    <div class="relative flex justify-center">
+                        <div class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0"></div>
+                        <div class="">
+                            <div class="flex flex-col justify-center items-center">
+                                <app-person name="Steven Kast 11" birthDate="July 28 1998">
+                                </app-person>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative p-6">
+                    <div class="border-t-2 absolute h-8 border-gray-400 top-0" style="left: 0px; right: 50%;">
+                    </div>
+                    <div class="relative flex justify-center">
+                        <div class="-mt-6 border-l-2 absolute h-6 border-gray-400 top-0"></div>
+                        <div class="">
+                            <div class="flex flex-col justify-center items-center">
+                                <app-person name="Steven Kast 12" birthDate="July 28 1998">
+                                </app-person>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
 </div>
