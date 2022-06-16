@@ -1,25 +1,11 @@
 <div class="mx-auto md:px-4">
     <h1 class="text-center pt-5">Wannemacher Family Tree</h1>
 
-
-    <!-- <app-person *ngFor="let person of familyTest.familyMembers" [name]="person.name" [birthDate]="person.birthDate">
-        </app-person> -->
-
     <!-- Reference: https://tailwindcomponents.com/component/tailwindcss-flow-chart -->
     <div
         class="h-full md:h-full overflow-auto snap-mandatory snap-x scroll-p-64 md:scroll-p-16 items-start justify-start flex bg-gradient-to-t from-red-700/10">
         <div class="p-4 w-fit border-l-2 border-t-4">
-            <div class="flex flex-row justify-start items-center space-x-4">
-                <app-person name="Herman Wannemacher" birthDate="July 28 1998">
-                </app-person>
-                <app-person name="Hellen Wannemacher" birthDate="July 28 1998">
-                </app-person>
-            </div>
-            <div class="flex flex-row mt-5 justify-start relative w-fit">
-                <div class="p-3 border-l-2 border-t-4" *ngFor="let person of familyTreeData.children">
-                    <app-family-tree-node [familyNodeDate]="person"></app-family-tree-node>
-                </div>
-            </div>
+            <app-family-tree-node [familyNodeDate]="familyTreeData"></app-family-tree-node>
         </div>
     </div>
 </div>
