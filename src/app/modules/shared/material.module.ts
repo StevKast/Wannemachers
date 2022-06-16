@@ -8,6 +8,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatTreeModule } from '@angular/material/tree'
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { MatMenuModule } from '@angular/material/menu'
     MatDividerModule,
     MatListModule,
     MatMenuModule,
+    MatExpansionModule,
+    MatTreeModule
   ]
 })
 export class MaterialModule { }
