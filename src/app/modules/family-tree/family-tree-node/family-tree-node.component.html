@@ -1,4 +1,4 @@
-<div class="flex flex-row bg-white max-w-fit p-2 rounded-xl shadow-lg snap-center">
+<div class="flex flex-row max-w-fit sticky left-2 bg-cream p-1 md:p-2 rounded-xl shadow-lg snap-start">
     <app-person [name]="familyNodeDate.member.name" [birthDate]="familyNodeDate.member.birthDate">
     </app-person>
     <app-person *ngIf="familyNodeDate.spouse" [name]="familyNodeDate.spouse.name"
@@ -6,7 +6,8 @@
     </app-person>
 </div>
 <div class="flex flex-row justify-center items-start">
-    <div class="p-3 mt-5 border-l-2 border-t-4" *ngFor="let child of familyNodeDate.children">
+    <div class="p-1 mt-2 md:p-3 md:mt-5 border-l-2 border-t-4 border-seafoam-500/25"
+        *ngFor="let child of familyNodeDate.children">
         <app-family-tree-node [familyNodeDate]="child"></app-family-tree-node>
     </div>
 </div>

@@ -1,0 +1,25 @@
+$scrollbar-track: #AEBCBC;
+$scrollbar-thumb: #262833;
+
+/* Works on Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: $scrollbar-thumb $scrollbar-track;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    // width: 12px;
+    height: 48px;
+}
+
+*::-webkit-scrollbar-track {
+    background: $scrollbar-track;
+    border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb;
+    border-radius: 20px;
+    border: 3px solid $scrollbar-track;
+}
