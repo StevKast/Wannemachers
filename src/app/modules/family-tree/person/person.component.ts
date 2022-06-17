@@ -11,6 +11,9 @@ export class PersonComponent implements OnInit {
   @Input() birthDate = '';
   @Input() deathDate = '';
 
+
+  randomSeed = Math.random();
+
   constructor() { }
 
   ngOnInit(): void {
