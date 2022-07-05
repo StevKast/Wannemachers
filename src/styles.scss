@@ -34,6 +34,9 @@ $wannemachers-theme: app.define-light-theme((color: (primary: $wannemachers-prim
 // that you are using.
 @include mat.all-component-themes($wannemachers-theme);
 
+
+// @include mat.core(app.$my-custom-typography);
+
 /* You can add global styles to this file, and also import other style files */
 
 html,
